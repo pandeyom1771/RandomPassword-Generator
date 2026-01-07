@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Required for responsive design on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>Random Password Generator</title>
+
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 
+    Main wrapper to center content both vertically and horizontally.
+    Keeps layout clean and focused.
+  -->
+  <main class="wrapper">
+
+    <!-- 
+      Card acts as the main container.
+      All UI elements stay inside this for structure and clarity.
+    -->
+    <section class="card">
+
+      <!-- Header section -->
+      <header class="header">
+        <h1>Random Password Generator</h1>
+        <p>
+          Simple tool to generate strong passwords  
+          without unnecessary complexity.
+        </p>
+      </header>
+
+      <!-- 
+        Output field where generated password will be displayed.
+        Readonly because user should not type here.
+      -->
+      <div class="output">
+        <input 
+          type="text" 
+          id="passwordOutput" 
+          placeholder="generated password appears here"
+          readonly
+        />
+      </div>
+
+      <!-- Controls section -->
+      <div class="controls">
+
+        <!-- Password length selection -->
+        <div class="control-row">
+          <label for="length">Password Length</label>
+          <input 
+            type="number" 
+            id="length" 
+            min="4" 
+            max="32" 
+            value="12"
+          >
+        </div>
+
+        <!-- Character type options -->
+        <div class="options">
+
+          <!-- Uppercase option -->
+          <label>
+            <input type="checkbox" id="uppercase" checked>
+            Uppercase
+          </label>
+
+          <!-- Lowercase option -->
+          <label>
+            <input type="checkbox" id="lowercase" checked>
+            Lowercase
+          </label>
+
+          <!-- Numbers option -->
+          <label>
+            <input type="checkbox" id="numbers" checked>
+            Numbers
+          </label>
+
+          <!-- Special characters option -->
+          <label>
+            <input type="checkbox" id="symbols">
+            Symbols
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Button to trigger password generation -->
+      <button id="generateBtn">
+        Generate Password
+      </button>
+
+    </section>
+  </main>
+
+  <!-- Linking external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

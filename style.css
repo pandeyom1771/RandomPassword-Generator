@@ -1,0 +1,219 @@
+/* 
+  Reset: kill browser randomness.
+  Discipline first, beauty later.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Base body.
+  Cosmic dusk vibe — deep purple, indigo, calm darkness.
+*/
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  color: #eaeaf0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(99, 102, 241, 0.2), transparent 45%),
+    linear-gradient(180deg, #0b0f2a, #050611);
+  overflow-x: hidden;
+}
+
+/*
+  Wrapper centers the card but allows atmosphere around it.
+*/
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+/*
+  Main glass card.
+  Subtle glow, thin border, nothing loud.
+*/
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 32px;
+  border-radius: 20px;
+
+  background: rgba(15, 16, 40, 0.65);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/*
+  Header styling.
+  Title is serif-ish to imply royalty & elegance.
+*/
+.header h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #b6b7d3;
+  line-height: 1.5;
+}
+
+/*
+  Password output field.
+*/
+.output {
+  margin: 26px 0;
+}
+
+.output input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+
+  background: rgba(5, 6, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+  font-size: 0.95rem;
+  letter-spacing: 0.6px;
+}
+
+.output input::placeholder {
+  color: #7c7fa8;
+}
+
+/*
+  Controls container.
+*/
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/*
+  Password length row.
+*/
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-row label {
+  font-size: 0.9rem;
+  color: #d6d7ee;
+}
+
+.control-row input {
+  width: 82px;
+  padding: 7px 10px;
+  border-radius: 10px;
+
+  background: rgba(5, 6, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+}
+
+/*
+  Checkbox grid.
+*/
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #cfd0ea;
+  cursor: pointer;
+}
+
+/*
+  Checkbox accent — subtle violet.
+*/
+.options input {
+  accent-color: #8b5cf6;
+}
+
+/*
+  Generate button.
+  Liquid glass + royal gradient.
+*/
+button {
+  margin-top: 26px;
+  width: 100%;
+  padding: 14px;
+
+  border-radius: 999px;
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.9),
+      rgba(168, 85, 247, 0.9)
+    );
+
+  color: #0b0f2a;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(139, 92, 246, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+/*
+  Button hover — elegance, not aggression.
+*/
+button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 50px rgba(139, 92, 246, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+/*
+  Button active — subtle press.
+*/
+button:active {
+  transform: translateY(0);
+}
+
+/*
+  Mobile adjustments.
+*/
+@media (max-width: 480px) {
+  .card {
+    padding: 24px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+}
